@@ -21,6 +21,7 @@ public class ShimDependentPluginRegistryPlugin implements PluginRegistryExtensio
   public void init( PluginRegistry pluginRegistry ) {
     if ( KettleClientEnvironment.isInitialized() ) {
       PluginRegistry.addPluginType( ShimDependentJobEntryPluginType.getInstance() );
+      PluginRegistry.addPluginType( ShimDependentStepPluginType.getInstance() );
     }
   }
 
